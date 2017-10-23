@@ -1,0 +1,54 @@
+/*color de fondo #2e2e2a
+color de hover #f9a91a*/
+body {
+  font-family: sans-serif;
+}
+
+nav { /*tipo: block*/
+  /*outline: 1px solid yellow; /*tag de tipo block, ocupa el ancho total de su padre que es body*/
+}
+
+ul { /*tipo: block*/
+  /*outline: 1px solid blue;  /* tag tipo block, su padre es nav*/
+  list-style: none; /*para quitar las viñetas*/
+  margin: 0px; /* para quitarle el espacio, se usa margin + padding, ya que para algunos navegadores es padding, en otros es margin*/
+  padding: 0px;
+  background: #2e2e2a;
+  line-height: 35px;
+
+  /*2do método*/
+  overflow: auto; /*le devuelve su naturaleza de bloque*/
+
+
+}
+
+li { /*tipo: block*/
+  /*outline: 1px solid red;/*tag tipo block, se posiciona una sobre otra */
+  width: 100px; /*es de tipo block, se define un ancho especifico*/
+
+  /*1er método*/
+  /*display: inline-block; hacer que el tag <li> q es de tipo block, cambie a inline, para que se pongan en horizontal las letras */
+
+  /*2do método*/
+  float: left; /*par obtener el mismo resultado de display, usamos float, hacemos que se posicionen una al costado de la otra, */
+  /*le quita la estructura de bloque, de que po sí tiene su contenedor, va unido a aoverflow en su tag padre <ul>*/
+  text-align: center;
+}
+
+a { /*tipo: inline*/
+  /*outline: 1px solid green;/*tag tipo inline, ocupa el ancho de su contenido */
+  text-decoration: none; /*para quitarle el subrayado que tiene x default con <a>*/
+  display: block; /* le digo <a> que ocupe el espacio de su contenedor padre que es <li> de 100px, que toda esa superficie pueda ser linkeable, no sólo la palabra*/
+  color: #ffffff;
+}
+
+a:hover { /*con una pseudoclase del tag <a>, cuando se ponga el mouse sobre el item, quiero que cambie ese background de black to yellow*/
+  background: #f9a91a;
+  color: #000000;
+}
+
+/*Tips Lulu
+
+Usar outline para saber de que tipo es la etiqueta block o inline.
+
+*/
